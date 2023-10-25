@@ -1,0 +1,14 @@
+# 应用名称
+dubbo:
+  application:
+    name: order-server
+  protocol: # 指定通信规则
+    name: dubbo # 通信协议
+    port: -1 # dubbo协议端口，以供消费者访问，-1即为随机端口
+  registry: # 注册中心
+    id: zk-registry
+    address: zookeeper://127.0.0.1:2181
+
+# 应用服务 WEB 访问端口
+server:
+  port: 8082
